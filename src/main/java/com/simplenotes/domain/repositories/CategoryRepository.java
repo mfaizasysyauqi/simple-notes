@@ -1,5 +1,13 @@
-package main.java.com.simplenotes.domain.repositories;
+// CategoryRepository.java
+package com.simplenotes.domain.repositories;
 
-public class CategoryRepository {
-    
+import java.util.List;
+import com.simplenotes.domain.entities.Category;
+
+
+public interface CategoryRepository {
+    Category save(Category category);
+    Category findById(Long id);
+    List<Category> findAll();
+    void delete(Long id);
 }
